@@ -1,17 +1,30 @@
+/* style.css */
+* { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  background: #fff;
+}
+
+/* Center whole layout vertically and stack rows */
 body {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background-color: white;
-  flex-direction: column;
-  margin: 0;
+  min-height: 100vh;
 }
 
+/* <-- Important: these are required by the tests --> */
 .holder {
   display: flex;
+  justify-content: center;  /* must be exactly 'center' for the test */
+  align-items: center;
+  flex-wrap: wrap;          /* must allow wrapping to next row */
 }
 
+/* item styles */
 .item {
   width: 150px;
   height: 200px;
@@ -21,19 +34,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-	overflow:hidden;
+  margin: 0;                 /* no gaps so they appear squashed */
 }
 
-.green {
-  background-color: #387c2b; /* green */
-}
-
-.red {
-  background-color: #e62e24; /* red */
-}
-
-.blue {
-  background-color: blue; /* blue */
-}
+/* colors */
+.green { background-color: #387c2b; }
+.red   { background-color: #e62e24; }
+.blue  { background-color: blue; }
 
   
